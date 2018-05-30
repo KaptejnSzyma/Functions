@@ -5,12 +5,12 @@ def python_food():
     print(" " * left_margin, text)
 
 
-def centre_text(*args, sep= ' ', end_char= '\n', centered_file=None, flush_me=False):
+def centre_text(*args, sep= ' ', end='\n', file=None, flush=False):
     text = ""
     for arg in args:
         text += str(arg) + sep
     left_margin = (80 - len(text)) // 2
-    print(" " * left_margin, text, end=end_char, file=centered_file, flush=flush_me)
+    print(" " * left_margin, text, end=end, file=file, flush=flush)
 
 
 # call the function
