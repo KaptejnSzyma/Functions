@@ -5,19 +5,22 @@ def python_food():
     print(" " * left_margin, text)
 
 
-def centre_text(*args, sep= ' ', end='\n', file=None, flush=False):
+def centre_text(*args, sep=' '):
     text = ""
     for arg in args:
         text += str(arg) + sep
     left_margin = (80 - len(text)) // 2
-    print(" " * left_margin, text, end=end, file=file, flush=flush)
+    return  " " * left_margin + text
 
 
-with open("centered", mode='w') as centered_file:
+# with open("centered", mode='w') as centered_file:
     # call the function
-    centre_text("spam and eggs", file=centered_file)
-    centre_text(12, file=centered_file)
-    centre_text("spam, spam and eggs", file=centered_file)
-    centre_text("spam, spam, spam and spam", file=centered_file)
+print(centre_text("spam and eggs"))
+print(centre_text(12))
+print(centre_text("spam, spam and eggs"))
+print(centre_text("spam, spam, spam and spam"))
 
-    centre_text("first", "second", 3, 4, "spam", sep=':', file=centered_file)
+print(centre_text("first", "second", 3, 4, "spam", sep=':'))
+
+print("=" + str(12*3))
+print(sorted(["b", "d", "c", "a"]))
