@@ -15,12 +15,14 @@ def centre_text(*args, sep=' '):
 
 # with open("centered", mode='w') as centered_file:
     # call the function
-print(centre_text("spam and eggs"))
-print(centre_text(12))
-print(centre_text("spam, spam and eggs"))
-print(centre_text("spam, spam, spam and spam"))
+s1 = centre_text("spam and eggs")
+s2 = centre_text(12)
+s3 = centre_text("spam, spam and eggs")
+s4 = centre_text("spam, spam, spam and spam")
+s5 = centre_text("first", "second", 3, 4, "spam", sep=':')
+print(s1)
+print(s2)
+print(s3)
+print(s4)
+print(s5)
 
-print(centre_text("first", "second", 3, 4, "spam", sep=':'))
-
-print("=" + str(12*3))
-print(sorted(["b", "d", "c", "a"]))
